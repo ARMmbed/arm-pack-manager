@@ -1,4 +1,3 @@
-extern crate app_dirs;
 extern crate clap;
 
 use clap::{App, Arg};
@@ -28,6 +27,7 @@ fn main() {
         simplelog::LevelFilter::Info,
         simplelog::Config::default(),
         simplelog::TerminalMode::Mixed,
+        simplelog::ColorChoice::Auto
     )
     .unwrap();
     log::debug!("Logging ready.");
